@@ -29,4 +29,4 @@ before_script:
   - pip3 install docker-compose
 
 script: 
-  - docker-compose run app "python3.6 manage.py test && flake8" 
+  - docker-compose run app sh -c "python3.6 manage.py test && flake8" 
