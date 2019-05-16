@@ -9,7 +9,11 @@ python:
 services:
   - docker
 
-before_script: pip install docker-compose
+install: 
+  - pip install -r requirements.txt
+
+before_script: 
+  - pip install docker-compose
 
 script: 
   - docker-compose run app "python3.6 manage.py test && flake8" 
